@@ -30,7 +30,7 @@ const UserProductPage = () => {
     try {
       setLoading(true);
       console.log('Fetching products...');
-      const response = await axios.get('http://localhost:3001/products');
+      const response = await axios.get('https://product-mgmt-backend.onrender.com/products');
       console.log('Fetched products:', response.data);
       setProducts(response.data);
     } catch (error) {

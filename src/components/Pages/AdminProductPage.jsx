@@ -32,7 +32,7 @@ const AdminProductPage = () => {
     try {
       setLoading(true);
       console.log('Fetching products for admin...');
-      const response = await axios.get('http://localhost:3001/products');
+      const response = await axios.get('https://product-mgmt-backend.onrender.com/products');
       console.log('Fetched products:', response.data);
       setProducts(response.data);
     } catch (error) {
@@ -54,7 +54,7 @@ const AdminProductPage = () => {
         setProducts(prevProducts => prevProducts.filter(prod => prod.id !== id));
         
         // Make the API call
-        await axios.delete(`http://localhost:3001/products/${id}`);
+        await axios.delete(`https://product-mgmt-backend.onrender.com/products/${id}`);
         toast.success('Product deleted successfully!');
       } catch (error) {
         console.error('Error deleting product:', error);

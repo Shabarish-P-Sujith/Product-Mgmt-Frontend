@@ -42,7 +42,7 @@ function EditProductPage() {
       try {
         setLoading(true);
         console.log('Fetching product with ID:', id);
-        const response = await axios.get(`http://localhost:3001/products/${id}`);
+        const response = await axios.get(`https://product-mgmt-backend.onrender.com/products/${id}`);
         console.log('Fetched product:', response.data);
         
         if (response.data) {
@@ -97,7 +97,7 @@ function EditProductPage() {
         console.log('Updating product with data:', updatedData);
         
         // Make the PUT request
-        const response = await axios.put(`http://localhost:3001/products/${id}`, updatedData);
+        const response = await axios.put(`https://product-mgmt-backend.onrender.com/products/${id}`, updatedData);
         console.log('Update response:', response.data);
 
         if (response.status === 200) {

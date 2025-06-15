@@ -56,7 +56,7 @@ function AddProductPage() {
     if (validate()) {
       try {
         console.log('Submitting product data:', formData);
-        const response = await axios.post('http://localhost:3001/products', {
+        const response = await axios.post('https://product-mgmt-backend.onrender.com/products', {
           ...formData,
           price: parseFloat(formData.price) // Convert price to number
         });
